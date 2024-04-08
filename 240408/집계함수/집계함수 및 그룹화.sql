@@ -80,6 +80,12 @@ HAVING 평균급여 >= 2000;		-- 그룹화된 결과에 대해 조건
 
 -- WHERE, GROUP BY, HAVING 절은 순서가 바뀔 수 없다. 
 
+-- WITH ROLLUP
+-- 각 그룹별 소합계 및 총합계를 계산 
+-- 요약 보고서 작성이나 데이터 분석에 사용 
+SELECT DEPTNO, JOB, SUM(SAL)
+FROM emp
+GROUP BY DEPTNO, JOB WITH ROLLUP;
 
 
 
