@@ -1,0 +1,12 @@
+
+-- 세션 2 : 쓰기 트랜잭션
+SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
+START TRANSACTION;
+
+USE tcl;
+
+UPDATE person SET age = 50 WHERE name = '홍길동';
+
+ROLLBACK;		-- 
+
+SELECT * FROM person;
